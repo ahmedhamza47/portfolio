@@ -340,6 +340,7 @@ body:not(.user-is-tabbing) a:focus {
   right: 10%;
   justify-content: flex-end !important;
   padding: var(--gutter-normal) 0;
+  z-index: 99;
 }
 
 .nav__items {
@@ -358,8 +359,9 @@ body:not(.user-is-tabbing) a:focus {
 } */
 @media (max-width: 500px) {
   .nav {
-    justify-content: center;
-    right: 16%;
+    justify-content: center !important;
+    right: 15%;
+    left: 15%;
   }
 }
 
@@ -410,11 +412,7 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Header ----- */
 /* --------------------------------------- */
 #particles-js {
-  background: #1488cc;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #090a0e, #262f34),
-    url("/images/bg-img.jfif");
-  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #2e3b6e, #1e2629), */
   background: linear-gradient(to right, #090a0e, #1e2629),
     url("/images/bg-img.jfif");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -429,8 +427,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 #particles-js .particles-js-canvas-el {
-  width: 200% !important;
+  width: 100% !important;
   height: 100vh !important;
+  position: absolute;
+  left: 0cm !important;
 }
 .header {
   height: 100vh;
@@ -439,6 +439,7 @@ body:not(.user-is-tabbing) a:focus {
   background-attachment: fixed;
   font-size: var(--font-size-normal);
   width: 100% !important;
+  z-index: 99 !important;
 }
 
 .header__text {
@@ -446,6 +447,7 @@ body:not(.user-is-tabbing) a:focus {
   top: 50%;
   transform: translateY(-50%);
   left: 5%;
+  z-index: 99 !important;
 }
 
 .header__text p {
@@ -462,7 +464,8 @@ body:not(.user-is-tabbing) a:focus {
   .header__text {
     justify-content: center;
     text-align: center !important;
-    left: 19%;
+    left: 15%;
+    right: 15%;
   }
   .header__text p {
     transform: scale(0.8);
